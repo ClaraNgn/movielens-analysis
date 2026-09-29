@@ -203,6 +203,14 @@ cython_debug/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
 
+# MovieLens data is downloaded at runtime and must not be redistributed.
+ml-100k/
+ml-100k.zip
+*.zip.md5
+
+# Generated local figures and reports
+artifacts/
+
 # Ruff stuff:
 .ruff_cache/
 
