@@ -42,25 +42,6 @@ Item KNN produced 0.21% lower mean RMSE than User KNN under this specific protoc
 
 The dataset is not stored in this repository. The notebook downloads it directly from the official source at runtime.
 
-## Run in Google Colab
-
-Click **Open in Colab** above, then select **Runtime → Run all**. The data download and extraction are included in the notebook.
-
-## Run locally
-
-Python 3.10 or newer is recommended.
-
-```bash
-git clone https://github.com/ClaraNgn/movielens-analysis.git
-cd movielens-analysis
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-jupyter lab movielens_analysis.ipynb
-```
-
-## Methodological choices
-
 - No movie-frequency threshold is described as data cleaning. The full catalog is retained for evaluation.
 - A regularized `global mean + user bias + item bias` predictor is computed on the same folds as both KNN models.
 - KNN similarities use mean-centered training ratings. Test ratings do not influence similarity, eligibility, or fallback estimates.
